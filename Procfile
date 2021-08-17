@@ -1,0 +1,1 @@
+worker: node 3dbot.js
