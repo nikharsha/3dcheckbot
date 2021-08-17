@@ -19,7 +19,7 @@ client.on('message', async message => {
   if (command === "3d") {  
 
 
-  let wallet = args[0];
+  let wallet = args[0].toLowerCase();
 
   msg = wallet + ' **NOT FOUND** on the Snapshot! :(';
 
