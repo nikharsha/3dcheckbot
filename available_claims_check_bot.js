@@ -23,7 +23,7 @@ client.on('message', async message => {
 
   msg = 'Wallet ' + wallet + ' **DOES NOT HOLD** enough Bananas to claim a FREE Hand! :(';
 
-  if (wallet in data) {
+  if (wallet in data.toLowerCase()) {
     msg = 'Wallet ' + wallet + ' **CAN CLAIM ' + data[wallet] + ' ** FREE Hands, Yay! :)';
   }
 
