@@ -1,4 +1,4 @@
-// free claim eligibility check bot
+// 3d check bot
 require('dotenv').config();
 const fs = require('fs');
 
@@ -15,16 +15,16 @@ client.on('message', async message => {
 
   const args = message.content.slice(1).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  //if (message.content.startsWith('!free')) {
-  if (command === "free") {  
+  //if (message.content.startsWith('!3d')) {
+  if (command === "3d") {  
 
 
   let wallet = args[0].toLowerCase();
 
-  msg = 'Wallet' + wallet + ' **DOES NOT HOLD** enough Bananas to claim a FREE Hand! :(';
+  msg = wallet + ' **NOT FOUND** on the Snapshot! :(';
 
   if (wallet in data) {
-    msg = 'Wallet' + wallet + ' **CAN CLAIM ' + data[wallet] + ' ** FREE Hands, Yay! :)';
+    msg = wallet + ' **FOUND** on the Snapshot, Yay!';
   }
 
   message.channel.send(msg); 
