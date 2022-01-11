@@ -21,10 +21,10 @@ client.on('message', async message => {
 
   let wallet = args[0].toLowerCase();
 
-  msg = 'Wallet' + wallet + ' **DOES NOT HOLD** enough Bananas to claim a FREE Hand! :(';
+  msg = 'Wallet ' + wallet + ' **DOES NOT HOLD** enough Bananas to claim a FREE Hand! :(';
 
   if (wallet in data) {
-    msg = 'Wallet' + wallet + ' **CAN CLAIM ' + data[wallet] + ' ** FREE Hands, Yay! :)';
+    msg = 'Wallet ' + wallet + ' **CAN CLAIM ' + data[wallet] + ' ** FREE Hands, Yay! :)';
   }
 
   message.channel.send(msg); 
