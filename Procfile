@@ -1,1 +1,1 @@
-worker: node 3dbot.js
+worker: node available_claims_check_bot.js
